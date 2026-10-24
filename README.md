@@ -114,7 +114,6 @@ git clone https://github.com/yutang146012/github-tech-scout ~/.dsh/skills/github
 | 禁止逐个调 `/repos/...` | 匿名仓库 API 只有 60 次/小时，且常被同机其他工具用光；搜索是独立配额（10 次/分钟） |
 | README 走 raw | 不占配额，正文干净 |
 | CLI/skill 优先于 MCP | 常驻的工具定义会挤占上下文，CLI 调用更省 token；需要长连接或状态时才上 MCP |
-| 事实与声称分开 | star/提交时间来自 API 是事实，README 的功能描述是作者声称，混淆就会给出错误的推荐 |
 
 ## 迭代
 
