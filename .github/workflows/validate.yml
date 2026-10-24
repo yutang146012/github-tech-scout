@@ -33,4 +33,7 @@ jobs:
             exit 1
           }
 
+          # gh.ps1 exits non-zero on purpose; pwsh inherits $LASTEXITCODE as
+          # the step's exit code, so reset it before declaring success.
+          $global:LASTEXITCODE = 0
           'argument handling OK'
