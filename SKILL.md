@@ -1,6 +1,6 @@
 ---
 name: github-tech-scout
-description: Use when a task needs a capability that probably already exists — an MCP server, an agent skill, a library, a CLI, or a reference implementation — and the right move is to search GitHub, read a few READMEs, and hand the user a feasibility plan (找现成方案、技术选型、能不能用开源实现) instead of building from scratch.
+description: Use when a task needs a capability that likely already exists — an MCP server, an agent skill, a library, a CLI, or a reference implementation. Search GitHub, read a few READMEs, and return a decision-ready feasibility plan (找现成方案、技术选型、能不能用开源实现) instead of building from scratch.
 ---
 
 # GitHub 技术侦察
