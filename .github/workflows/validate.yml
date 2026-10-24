@@ -1,0 +1,36 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check skill structure and frontmatter
+        run: python3 scripts/validate_skill.py
+
+      - name: Smoke-test gh.ps1 error handling
+        shell: pwsh
+        run: |
+          # No network calls: CI must stay fast and must not burn GitHub's
+          # anonymous rate limits. Only argument handling is exercised.
+          $ErrorActionPreference = 'Continue'
+
+          & ./scripts/gh.ps1 search ''
+          if ($LASTEXITCODE -eq 0) {
+            Write-Error "empty query must exit non-zero"
+            exit 1
+          }
+
+          & ./scripts/gh.ps1 bogus
+          if ($LASTEXITCODE -eq 0) {
+            Write-Error "unknown command must exit non-zero"
+            exit 1
+          }
+
+          'argument handling OK'
