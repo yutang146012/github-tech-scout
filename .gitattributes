@@ -1,0 +1,7 @@
+# Keep the repo LF, but check PowerShell scripts out as CRLF on Windows so
+# they run without a BOM/line-ending surprise.
+* text=auto
+*.ps1 text eol=crlf
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
