@@ -1,5 +1,7 @@
 # github-tech-scout
 
+[![validate](https://github.com/yutang146012/github-tech-scout/actions/workflows/validate.yml/badge.svg)](https://github.com/yutang146012/github-tech-scout/actions/workflows/validate.yml)
+
 让 agent 自己去找现成方案：给它一个「我想要 XX 能力」的任务，它去 GitHub 检索、读 README、打分排序，回你一份能直接决策的可行性方案。
 
 这是 [DeepSeek Harness](https://github.com/deepseek-ai)（DSH）的一个 skill。
@@ -32,11 +34,11 @@
 用户级（所有项目可用）：
 
 ```powershell
-git clone https://github.com/<you>/github-tech-scout "$env:USERPROFILE\.dsh\skills\github-tech-scout"
+git clone https://github.com/yutang146012/github-tech-scout "$env:USERPROFILE\.dsh\skills\github-tech-scout"
 ```
 
 ```bash
-git clone https://github.com/<you>/github-tech-scout ~/.dsh/skills/github-tech-scout
+git clone https://github.com/yutang146012/github-tech-scout ~/.dsh/skills/github-tech-scout
 ```
 
 项目级（只在该项目生效）：clone 到 `<项目>/.dsh/skills/`。目录名保持 `github-tech-scout`，与 frontmatter 里的 `name` 一致。
